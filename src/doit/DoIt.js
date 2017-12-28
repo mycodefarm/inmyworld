@@ -46,7 +46,8 @@ class Doit extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchText: ""
+            searchText: "",
+            start: new Date()
         }
         this.onChange = this.onChange.bind(this);
         this.onBegin = this.onBegin.bind(this);
@@ -54,7 +55,8 @@ class Doit extends Component {
 
     onChange(event) {
         this.setState({
-            searchText: event.target.value
+            searchText: event.target.value,
+            start: new Date()
         });
     }
 
@@ -68,7 +70,7 @@ class Doit extends Component {
             <div className="main">
                 <Input size="large" placeholder="说一些你想说的话,做一些你想做的事"
                     style={{ width: 600 }} onChange={this.onChange} onPressEnter={this.onBegin} />
-                <TimeRecord start={Date.now()} />
+                <TimeRecord start={this.state.start} />
                 <p>{this.state.searchText}</p>
             </div>
         )
