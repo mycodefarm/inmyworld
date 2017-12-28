@@ -5,7 +5,6 @@ import qs from 'qs'; //对参数转化
 import logo from './logo.svg';
 import './App.css';
 
-// var qs = require('qs');
 axios.defaults.baseURL = 'http://localhost:8081';
 
 class App extends Component {
