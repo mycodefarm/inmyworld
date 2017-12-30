@@ -2,3 +2,13 @@
     text-align: center;
     padding: 30px;
 }
+
+.showTime {
+    font-size: 10ch;
+    color: red;
+}
+
+.showText {
+    font-size: 12ch;
+    color: orange;
+}
